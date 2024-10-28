@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.layout.VBox?>
+        <?import javafx.scene.text.Text?>
+        <?import com.jfoenix.controls.JFXPasswordField?>
+        <?import com.jfoenix.controls.JFXTextField?>
+        <?import com.jfoenix.controls.JFXCheckBox?>
+        <?import com.jfoenix.controls.JFXButton?>
+        <?import javafx.scene.text.TextFlow?>
+        <?import javafx.scene.layout.BorderPane?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.echoband.echoband.controller.ControllerSignUp">
+    <center>
+        <VBox alignment="CENTER" spacing="30" styleClass="container-box">
+            <Text text="Echo te da la bienvenida" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+
+            <VBox spacing="7">
+                <Text text="Nombre" style="-fx-font-size: 14px"/>
+                <JFXTextField fx:id="fieldnombre" promptText="Ingresa tu nombre" style="-fx-min-width: 200px; -fx-font-size: 16px;"/>
+            </VBox>
+
+            <VBox spacing="7">
+                <Text text="Correo Electrónico" style="-fx-font-size: 14px"/>
+                <JFXTextField fx:id="fieldcorreo" promptText="Ingresa tu correo" style="-fx-min-width: 200px; -fx-font-size: 16px"/>
+            </VBox>
+
+            <VBox spacing="7">
+                <Text text="Contraseña" style="-fx-font-size: 14px"/>
+                <JFXPasswordField fx:id="fieldcontrasena" promptText="*************" style="-fx-min-width: 200px; -fx-font-size: 16px"/>
+            </VBox>
+
+            <TextFlow>
+                <JFXCheckBox fx:id="checkterminos" text="Acepto los términos y condiciones"/>
+            </TextFlow>
+
+            <JFXButton fx:id="botoncrear" text="Crear cuenta"/>
+
+            <TextFlow>
+                <Text text="¿Ya tienes una cuenta? " style="-fx-font-size: 12px;" />
+                <Text text="Inicia sesión" styleClass="textoPicar" />
+            </TextFlow>
+        </VBox>
+    </center>
+    <right>
+        <ImageView>
+            <Image url="@/imgSignUp.jpg"/>
+        </ImageView>
+    </right>
+</BorderPane>
